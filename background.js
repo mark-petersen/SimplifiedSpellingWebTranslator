@@ -66,7 +66,7 @@ String.prototype.replaceWithCase=function(subStr, newStr){
 //Load word list into local storage
 chrome.runtime.onInstalled.addListener(function(install) {
 	var fast_count = 780;
-	var csvUrl = chrome.runtime.getURL("cutspel.csv");
+	var csvUrl = chrome.runtime.getURL("simplifiedSpelling.csv");
 	$.ajax({
 		url:csvUrl,
 		type:"text",
