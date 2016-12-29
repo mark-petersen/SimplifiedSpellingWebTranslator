@@ -153,12 +153,14 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
 		div.html(message.content);	
 		
 		//Get length of library to use
-		if (partial == "-1") {
-				partial = localStorage.length;
-			} 
-		else {
-			partial = parseInt(partial);
-			}
+		// mrp replace with always using advanced option.
+		partial = localStorage.length;
+		//if (partial == "-1") {
+		//		partial = localStorage.length;
+		//	} 
+		//else {
+		//	partial = parseInt(partial);
+		//	}
 		
 		//Convert content to lowercase as indexOf is case sensitive
 		var lowerMessage = $(message.content.toLowerCase()).text();
