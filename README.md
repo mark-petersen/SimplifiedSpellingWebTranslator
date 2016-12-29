@@ -44,6 +44,3 @@ This Chrome extension was created by members of the <a href="http://www.american
   <li>American Literacy Council, <a href="http://www.americanliteracy.com">http://www.americanliteracy.com</a>
 </ol>
 </p>
-				</div>
-			</div>
-		<div>
