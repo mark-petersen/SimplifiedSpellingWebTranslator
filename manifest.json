@@ -6,7 +6,7 @@
     			"128": "ON.png" },
     "permissions": ["storage","tabs"],
     "description": "Try simplified spelling in your web browser!",
-    "version": "0.0.4",
+    "version": "0.0.5",
 	"author": "Mark Petersen",
 	"homepage_url": "https://github.com/mark-petersen/CutSpel/tree/simplifiedSpelling",
     "background":{
