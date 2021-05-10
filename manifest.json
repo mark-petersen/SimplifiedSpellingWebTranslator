@@ -4,7 +4,7 @@
     "short_name": "Simplified Spelling",
     "icons": { 	"48": "ON.png", 
     			"128": "ON.png" },
-    "permissions": ["storage","tabs"],
+    "permissions": ["storage"],
     "description": "Try simplified spelling in your web browser!",
     "version": "1.1.0",
 	"author": "Mark Petersen",
