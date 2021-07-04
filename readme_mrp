@@ -1,0 +1,3 @@
+zip with:
+zip SimplifiedSpelling.zip SimplifiedSpelling/?*.* SimplifiedSpelling/bootstrap/css/bootstrap.min.css
+
