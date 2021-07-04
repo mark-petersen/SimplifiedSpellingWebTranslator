@@ -59,7 +59,11 @@
 //Keep capitalization of words.
 String.prototype.replaceWithCase=function(subStr, newStr){
  	return this.replace(subStr, function(found) {
-  		return /[A-Z]/.test(found.charAt(0))?( newStr.charAt(0).toUpperCase() + newStr.substring(1) ) : newStr.toLowerCase();
+        if (newStr.charAt(0) == "U") {
+            return newStr
+        } else {
+            return /[A-Z]/.test(found.charAt(0))?( newStr.charAt(0).toUpperCase() + newStr.substring(1) ) : newStr.toLowerCase();
+        }
  	});  
 }
 
