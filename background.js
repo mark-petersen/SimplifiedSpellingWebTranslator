@@ -39,10 +39,6 @@
             new_val = val;
             //convert to lowercase since indexOf is case insensistive
             lc_val = val.toLowerCase();
-            // A small dictionary was created for this page, with
-            // words[] the ordered words on the page in TS and
-            // cut[] the revised words in the same order.
-            // regex[] is a regular expression of each word.
             for (i=0; i < length; i++) {
             	if (lc_val.indexOf(words[i]) >= 0) {
             		new_val = new_val.replaceWithCase(regex[i], cut[i]);
@@ -51,9 +47,6 @@
             // Only replace text if the new value is actually different!
             if (new_val !== val) {
               	if (! /</.test(new_val)) {
-                	node.nodeValue = new_val;
-              	} 
-              	if (/<span/.test(new_val)) {
                 	node.nodeValue = new_val;
               	} 
             }
@@ -67,8 +60,7 @@
 String.prototype.replaceWithCase=function(subStr, newStr){
  	return this.replace(subStr, function(found) {
         if (newStr.charAt(0) == "U") {
-            return newStr;
-            //return '<span style="color:red">' + newStr + '</span>';
+            return newStr
         } else {
             return /[A-Z]/.test(found.charAt(0))?( newStr.charAt(0).toUpperCase() + newStr.substring(1) ) : newStr.toLowerCase();
         }
@@ -200,7 +192,7 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
 
 		//Construct regex array from word list
 	 	for (i=0; i < words.length; i++) {
-       		regex[i] = new RegExp('<span style="color:red"> (?!<.*?)\\b(' + words[i] + ')\\b(?![^<>]*?(</a>|>))</span>', "gi");
+       		regex[i] = new RegExp('(?!<.*?)\\b(' + words[i] + ')\\b(?![^<>]*?(</a>|>))', "gi");
 		}
 		
 		//Update text
